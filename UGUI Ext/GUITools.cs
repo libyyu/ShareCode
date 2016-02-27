@@ -84,7 +84,7 @@ public class GUITools  {
 
     public static string GetFilePath(string fullname)
     {
-        String temp = RapFilePath(fullname);
+        string temp = RapFilePath(fullname);
 
         int nPos = temp.LastIndexOf('/');
         if (nPos != -1)
