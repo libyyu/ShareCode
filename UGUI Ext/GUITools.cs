@@ -77,6 +77,24 @@ public class GUITools  {
         return uiRoot2D;
     }
 
+    public static string RapFilePath(string fullname)
+    {
+        return fullname.Replace('\\', '/');
+    }
+
+    public static string GetFilePath(string fullname)
+    {
+        String temp = RapFilePath(fullname);
+
+        int nPos = temp.LastIndexOf('/');
+        if (nPos != -1)
+        {
+            return temp.Substring(0,nPos);
+        }
+        else
+            return temp;
+    }
+
 #if UNITY_EDITOR
     [MenuItem("Tools/GUI/AtlasMaker")]
     public static void MakeAtlas()
@@ -91,8 +109,7 @@ public class GUITools  {
                 GameObject go = new GameObject(sprite.name);
                 go.AddComponent<SpriteRenderer>().sprite = sprite;
                 
-                
-                string allPath = FGame.Utility.Util.GetFilePath(assetPath) + "/" + sprite.name + ".prefab";
+                string allPath = GetFilePath(assetPath) + "/" + sprite.name + ".prefab";
                 string prefabPath = allPath.Substring(allPath.IndexOf("Assets"));
                 PrefabUtility.CreatePrefab(prefabPath, go);
                 GameObject.DestroyImmediate(go);
