@@ -93,5 +93,12 @@ namespace UGUI
             if(bLastPlaying)
                 tween.Play();
         }
+#if UNITY_EDITOR
+        [ContextMenu("Play")]
+        protected virtual void PlayTest()
+        {
+            RePlay();
+        }
+#endif
     }
 }
