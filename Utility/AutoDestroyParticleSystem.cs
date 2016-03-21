@@ -4,6 +4,7 @@ using System.Collections;
 /// Add this class to a ParticleSystem so it auto destroys once it has stopped emitting.
 /// Make sure your ParticleSystem isn't looping, otherwise this script will be useless
 /// </summary>
+[AddComponentMenu("Component/AutoDestroyParticleSystem")]
 public class AutoDestroyParticleSystem : MonoBehaviour 
 {
 	/// True if the ParticleSystem should also destroy its parent

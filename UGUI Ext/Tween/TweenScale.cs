@@ -5,6 +5,7 @@ using DG.Tweening;
 
 namespace UGUI
 {
+    [AddComponentMenu("UGUI/TweenScale")]
     public class TweenScale : ITween
     {
         public float scale = 1.0f;

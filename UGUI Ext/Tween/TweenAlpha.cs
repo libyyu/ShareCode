@@ -5,6 +5,7 @@ using System;
 
 namespace UGUI
 {
+    [AddComponentMenu("UGUI/TweenAlpha")]
     [RequireComponent(typeof(CanvasGroup))]
     public class TweenAlpha : ITween
     {

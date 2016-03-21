@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 namespace UGUI
 {
+    [ExecuteInEditMode]
+    [AddComponentMenu("UGUI/UIPlayTween")]
 #if !PEOJECT_ARTS //非美术工程
     [SLua.CustomLuaClass]
 #endif

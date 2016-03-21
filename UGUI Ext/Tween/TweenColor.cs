@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 namespace UGUI
 {
+    [AddComponentMenu("UGUI/TweenColor")]
     [RequireComponent(typeof(Outline))]
     public class TweenColor : ITween
     {

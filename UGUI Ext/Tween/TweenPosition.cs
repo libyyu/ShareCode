@@ -5,6 +5,7 @@ using DG.Tweening;
 
 namespace UGUI
 {
+    [AddComponentMenu("UGUI/TweenPosition")]
     public class TweenPosition : ITween
     {
         public Vector3 from;
