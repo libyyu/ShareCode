@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace UGUI
 {
 #if !PEOJECT_ARTS //非美术工程
-    [FLua.CustomLuaClass]
+    [SLua.CustomLuaClass]
 #endif
     public class UIPlayTween : MonoBehaviour
     {
